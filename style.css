@@ -1,0 +1,129 @@
+@font-face {
+  font-family: regularItalic;
+  src: url(fonts/silkserif-regularitalic-webfont.ttf);
+}
+@font-face {
+  font-family: plainLight;
+  src: url(fonts/plain-light-webfont.ttf);
+}
+@font-face {
+  font-family: plainRegular; /* DEFAULT FONT FOR THIS PROJECT */
+  src: url(fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+  font-family: lightItalic;
+  src: url(fonts/silkserif-lightitalic-webfont.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+  font-family: plainRegular;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* <-------------------LOADER CREATION--------------------> */
+
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: #0b0b0b;
+  padding: 20vh 6vw;
+}
+
+.line {
+  height: fit-content;
+  line-height: 6.9vw;
+  overflow: hidden;
+}
+
+.line h1 {
+  font-family: plainRegular;
+  font-size: 6.5vw;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+
+.counter {
+  position: absolute;
+  left: 8%;
+  top: 18%;
+}
+
+.counter span {
+  font-family: lightItalic;
+  font-size: 3.3vw;
+}
+
+#yourMoved {
+  margin-left: 15vw;
+}
+
+#now {
+  font-family: plainlight;
+  font-weight: 600;
+  animation: fontBlink 1s ease-in-out 1 forwards; /* 2s duration, runs once */
+  animation-iteration-count: infinite; /* Blink 4 times */
+}
+
+@keyframes fontBlink {
+    0% {
+        opacity: 1;
+        font-family: plainRegular;
+        -webkit-text-stroke: 0;
+    }
+    25% {
+        /* opacity: 0; */
+    }
+    50% {
+        opacity: 1;
+        font-family: regularItalic;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+    }
+    75% {
+        /* opacity: 0; */
+    }
+    100% {
+        opacity: 1;
+        font-family: plainRegular;
+        -webkit-text-stroke: 0;
+    }
+}
+
+.wait {
+  font-family: plainLight;
+  position: absolute;
+  left: 30%;
+  top: 70%;
+  font-weight: 500;
+}
+
+/* <-------------------LOADER CREATION END--------------------> */
+
+/* <---------------------PAGE1 CREATION-----------------------> */
+#main {
+  position: relative;
+  background-color: #0b0b0b;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background: #151515;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
