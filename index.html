@@ -9,17 +9,17 @@
       type="image/x-icon"
     />
     <title>Obys Agency</title>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" class="css" />
   </head>
   <body>
-    <div id="loader">
+    <div id="crsr"></div>
+    <!-- <div id="loader">
       <div class="line">
         <div class="counter">
           <span id="counter">00</span>
@@ -36,12 +36,11 @@
       <div class="wait">
         <p>Please wait <br />a few seconds.</p>
       </div>
-    </div>
+    </div> -->
     <div id="main">
-      <div id="crsr"></div>
       <div id="page1">
         <div id="nav">
-          <div class="nav1">
+          <div class="nav1" data-scroll-sticky data-scroll-target="#target-element">
             <svg
               class="menu-opener__square"
               width="12"
@@ -136,17 +135,234 @@
           <div class="centerText">
             <div class="lines"><h1>We design</h1></div>
             <div class="lines"><h1>unique</h1></div>
-            <div class="lines"><h1 class="hoverTextH1"><a href="/webDesigns/">web</a>/<a href="/graphicDesigns">graphic</a></h1></div>
+            <div class="lines">
+              <h1 class="hoverTextH1">
+                <a href="/webDesigns/" id="webLink">web</a>
+                /
+                <a href="/graphicDesigns" id="graphicLink">graphic</a>
+              </h1>
+            </div>
             <div class="lines"><h1>experience</h1></div>
           </div>
           <div class="scrollAnimation">
-            <div class="scrollText">Scroll</div>
+            <p class="scrollText">Scroll</p>
           </div>
         </div>
+    </div>
+    <div id="page2">
+      <div class="videoContainer">
+        <div class="videoCursor">
+          <i class="ri-play-fill"></i>
+        </div>
+        <div class="img"></div>
+        <video autoplay loop muted src="https://obys.agency/wp-content/uploads/2024/12/Obys-Showreel-2024.mp4"></video>
       </div>
-      <div id="page2"></div>
-      <div id="page3"></div>
-      <div id="page4"></div>
+    </div>
+    <div id="page3">
+      <div class="sec1">
+        <div class="zeroOne">
+          <p>02</p>
+        </div>
+        <h1>OUR PROJECTS</h1>
+      </div>
+      <div class="underline"></div>
+      <div class="sec2">
+        <div class="container">
+          <div class="item">
+            <div class="title">OLGA PRUDKA</div>
+            <div class="img-container">
+              <img class="coverImgs" src="assets/img1-1.jpg" alt="Image 1 cover">
+            <img src="assets/img1-2.jpg" alt="Image 1 bg">
+            </div>
+            <div class="description">
+              <p>Logo design, Website<br>
+                 design, Development
+              </p>
+              <p>2023</p>
+          </div>
+          </div>
+          <div class="item">
+            <div class="title">AIM</div>
+            <div class="img-container">
+            <img class="coverImgs" src="assets/img2-1.jpg" alt="Image 2 cover">
+            <img src="assets/img2-2.jpg" alt="Image 2 bg">
+            </div>
+            <div class="description">
+              <p>Logo design, Website design,<br>Development</p>
+              <p>2024</p></div>
+          </div>
+          <div class="item">
+            <div class="title">OCHI</div>
+            <div class="img-container">
+            <img class="coverImgs" src="assets/img3-1.jpg" alt="Image 3 cover">
+            <img src="assets/img3-2.jpg" alt="Image 3 bg">
+            </div>
+            <div class="description"><p>Website design, Development
+           </p>
+           <p>2022</p></div>
+          </div>
+          <div class="item">
+            <div class="title">David Laxer</div>
+            <div class="img-container">
+            <img class="coverImgs" src="assets/img4-1.jpg" alt="Image 4 cover">
+            <img src="assets/img4-2.jpg" alt="Image 4 bg">
+            </div>
+            <div class="description"><p>Website design, Development
+           </p>
+           <p>2023</p></div>
+          </div>
+          <div class="item">
+            <div class="title">Éminente</div>
+            <div class="img-container">
+            <img class="coverImgs" src="assets/img5-1.jpg" alt="Image 5 cover">
+            <img src="assets/img5-2.jpg" alt="Image 5 bg">
+            </div>
+            <div class="description"><p>Logo design, Website<br>
+              design, Development
+           </p>
+           <p>2023</p></div>
+          </div>
+          <div class="item">
+            <div class="title">MAKHNO</div>
+            <div class="img-container">
+            <img class="coverImgs" src="assets/img6-1.jpg" alt="Image 6 cover">
+            <img src="assets/img6-2.jpg" alt="Image 6 bg">
+            </div>
+            <div class="description"><p>Website design, Development
+           </p>
+           <p>2023</p></div>
+          </div>
+        </div>
+        <div class="downArrow">
+          <i class="ri-arrow-right-line"></i>
+        </div>
+        <div class="crossArrow">
+          <i class="ri-arrow-right-line"></i>
+        </div>
+        <div class="rightArrow">
+          <i class="ri-arrow-right-line"></i>
+        </div>
+      </div>
+      <div class="sec3">
+        <div class="projectCircle">
+          <h4>All Projects <span>(18)</span></h4>
+        </div>
+      </div>
+    </div>
+    <div id="page4">
+      <div class="about1">
+        <div class="zeroThree">
+          <p>03</p>
+        </div>
+        <h1>ABOUT OBYS</h1>
+      </div>
+      <div class="underlineAbout"></div>
+      <div class="about">
+        <div class="aboutText1"><p>Our agency is about people who</p></div>
+        <div class="aboutText1"><p>love creating, designing and </p></div>
+        <div class="aboutText1"><p>developing wow projects. In the </p></div>
+        <div class="aboutText1"><p>same time we are a boutique</p></div>
+        <div class="aboutText1"><p>agency that is more than the</p></div>
+        <div class="aboutText1"><p>collective. We learn and grow, win</p></div>
+        <div class="aboutText1"><p>and celebrate together.</p></div>
+      </div>
+      <div class="aboutImg">
+        <img src="https://obys.agency/wp-content/uploads/2020/07/content-image01.jpg" alt="">
+        <div class="aboutImgText">
+             <p>We are happy to present our new</p>
+             <p>website and updated version of Obys</p>
+             <p>agency. As before we are open for new</p>
+             <p>projects worldwide!</p>
+              <br>
+             <p>Would you like to have award winning</p>
+             <p>site or unique branding style, please</p>
+             <p>say hi to our manager —</p>
+             <a href="mailto:info@obys.agency">info@obys.agency</a>
+             <p>And we will help you with the pleasure.</p>
+        </div>
+      </div>
+      <div class="aboutBlueDiv">
+        <div class="list">
+          <h1>Awwwards x16</h1>
+          <p>SOTM, SOTD and<br>
+          Honrable Mentions</p>
+        </div>
+        <div class="list">
+          <h1>Red Dot Award x1</h1>
+          <p>Best of the Best</p>
+        </div>
+        <div class="list">
+          <h1>FWA x11</h1>
+          <p>FWA of The Day</p>
+        </div>
+        <div class="list">
+          <h1>CSSDA x23</h1>
+          <p>WOTM, WOTD and UI,<br>
+             UX, Innovation</p>
+        </div>
+        <div class="list">
+          <h1>Behance x25</h1>
+          <p>Interaction, Graphic <br>Design</p>
+        </div>
+      </div>
+      <div class="aboutFooter">
+        <div class="underlineAbout2"></div>
+        <p>We work with</p>
+      </div>
+    </div>
+    <div id="page5">
+        <div class="Scrollline">
+          <h1>SCIENCE-TECHNOLOGY-FASHION-SPORT-</h1>
+          <h1>SCIENCE-TECHNOLOGY-FASHION-SPORT-</h1>
+        </div>
+        <div class="Scrollline2">
+          <h1>BEAUTY-REAL ESTATE-ARCHITECTURE-</h1>
+          <h1>BEAUTY-REAL ESTATE-ARCHITECTURE-</h1>
+        </div>
+        <div class="Scrollline">
+          <h1>PARTNERS-TRAVEL-SCIENCE-</h1>
+          <h1>PARTNERS-TRAVEL-SCIENCE-</h1>
+        </div>
+        <div class="Scrollline2">
+          <h1>AUTOMOTIVE-HOTELS-MUSIC-</h1>
+          <h1>AUTOMOTIVE-HOTELS-MUSIC-</h1>
+        </div>
+    </div>
+    <div id="page6">
+      <div class="create">
+        <div class="zeroOne">
+          <p>04</p>
+        </div>
+        <h1>LET'S CREATE 
+          <span class="rightArroww">
+            <i class="ri-arrow-right-line"></i>
+          </span>
+        </h1>
+      </div>
+      <div class="underlineLast"></div>
+      <div class="details">
+        <div class="socials">
+          <p>Socials</p>
+          <a href="">Dribble</a>
+          <a href="">Behance</a>
+          <a href="">Instagram</a>
+          <a href="">Facebook</a>
+          <a href="">Twitter</a>
+          <a href="">Youtube</a>
+        </div>
+        <div class="address">
+          <p>Address</p>
+          <p>Zamarstynivska 55<br>
+            79019 Lviv<br>
+            Ukraine</p>
+        </div>
+        <div class="sayHi">
+          <p>Say Hi!</p>
+          <a href="">info@obys.agency</a>
+        </div>
+      <div class="underlineLast2"></div>
+      </div>
+      <p class="copyRights">Obys Agency © 2024</p>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -154,7 +370,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
